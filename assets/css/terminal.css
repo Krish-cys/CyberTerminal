@@ -1,0 +1,351 @@
+/* =======================================================
+   CYBER TERMINAL v2
+   terminal.css
+   Interactive Terminal
+=======================================================*/
+
+/* ---------- TERMINAL CONTAINER ---------- */
+
+.terminal-panel{
+
+    position:relative;
+
+    background:rgba(0,0,0,.15);
+
+}
+
+/* ---------- OUTPUT ---------- */
+
+#terminal-output{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding-right:10px;
+
+    font-family:"JetBrains Mono",monospace;
+
+    font-size:15px;
+
+    line-height:1.9;
+
+    word-break:break-word;
+
+}
+
+/* ---------- PARAGRAPHS ---------- */
+
+#terminal-output p{
+
+    margin-bottom:8px;
+
+}
+
+/* ---------- PROMPT ---------- */
+
+.prompt{
+
+    color:var(--primary);
+
+    font-family:"JetBrains Mono",monospace;
+
+    font-weight:700;
+
+}
+
+/* ---------- INPUT ROW ---------- */
+
+.terminal-input{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding-top:18px;
+
+    border-top:1px solid var(--border);
+
+}
+
+/* ---------- INPUT ---------- */
+
+#terminal{
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:var(--primary);
+
+    font-family:"JetBrains Mono",monospace;
+
+    font-size:15px;
+
+    width:100%;
+
+    caret-color:transparent;
+
+}
+
+/* ---------- FAKE CURSOR ---------- */
+
+.terminal-input::after{
+
+    content:"";
+
+    width:10px;
+
+    height:20px;
+
+    background:var(--primary);
+
+    display:inline-block;
+
+    animation:cursorBlink .9s infinite;
+
+}
+
+/* ---------- CURSOR ---------- */
+
+@keyframes cursorBlink{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:0;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- COMMAND ---------- */
+
+.command{
+
+    color:var(--primary);
+
+}
+
+/* ---------- OUTPUT ---------- */
+
+.response{
+
+    color:var(--text);
+
+    margin-left:18px;
+
+}
+
+/* ---------- SUCCESS ---------- */
+
+.success{
+
+    color:var(--primary);
+
+}
+
+/* ---------- INFO ---------- */
+
+.info{
+
+    color:var(--secondary);
+
+}
+
+/* ---------- WARNING ---------- */
+
+.warning{
+
+    color:var(--warning);
+
+}
+
+/* ---------- ERROR ---------- */
+
+.error{
+
+    color:var(--danger);
+
+}
+
+/* ---------- ASCII ---------- */
+
+.ascii-output{
+
+    color:var(--primary);
+
+    white-space:pre;
+
+    font-size:13px;
+
+    line-height:1.2;
+
+}
+
+/* ---------- TABLE ---------- */
+
+.terminal-table{
+
+    display:grid;
+
+    grid-template-columns:170px auto;
+
+    row-gap:8px;
+
+    margin:15px 0;
+
+}
+
+.terminal-table div:nth-child(odd){
+
+    color:var(--secondary);
+
+}
+
+.terminal-table div:nth-child(even){
+
+    color:white;
+
+}
+
+/* ---------- COMMAND BOX ---------- */
+
+.command-box{
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    padding:16px;
+
+    margin:16px 0;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+/* ---------- HELP GRID ---------- */
+
+.help-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:15px;
+
+}
+
+.help-grid span{
+
+    color:var(--primary);
+
+}
+
+/* ---------- PROJECT CARD ---------- */
+
+.project-card{
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    padding:18px;
+
+    margin-top:15px;
+
+    background:rgba(255,255,255,.02);
+
+    transition:.3s;
+
+}
+
+.project-card:hover{
+
+    transform:translateY(-3px);
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 20px rgba(0,255,136,.18);
+
+}
+
+/* ---------- SCROLL ---------- */
+
+#terminal-output::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#terminal-output::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+/* ---------- SELECTION ---------- */
+
+#terminal-output::selection{
+
+    background:var(--primary);
+
+    color:black;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+#terminal-output{
+
+    font-size:13px;
+
+}
+
+.prompt{
+
+    font-size:12px;
+
+}
+
+#terminal{
+
+    font-size:13px;
+
+}
+
+.help-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.terminal-table{
+
+    grid-template-columns:120px auto;
+
+}
+
+}

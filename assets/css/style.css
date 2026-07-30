@@ -1,95 +1,334 @@
+/* =======================================================
+   CYBER TERMINAL v2
+   style.css
+   Base Theme & Global Styles
+======================================================= */
+
+/* ---------- CSS VARIABLES ---------- */
+
+:root{
+
+    --bg:#05070d;
+    --surface:#0d1117;
+    --surface2:#111827;
+
+    --primary:#00ff88;
+    --secondary:#00d9ff;
+
+    --danger:#ff4d4d;
+    --warning:#ffb703;
+
+    --text:#d8dee9;
+    --muted:#8b949e;
+
+    --border:rgba(0,255,136,.18);
+
+    --shadow:0 0 18px rgba(0,255,136,.18);
+
+    --radius:14px;
+
+}
+
+/* ---------- RESET ---------- */
+
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
 }
 
 body{
 
-    background:#050505;
+    background:var(--bg);
 
-    color:#00ff66;
+    color:var(--text);
 
-    font-family:"JetBrains Mono",monospace;
+    font-family:"Inter",sans-serif;
 
     overflow:hidden;
 
+    height:100vh;
+
 }
+
+/* ---------- TYPOGRAPHY ---------- */
+
+h1,h2,h3,h4,h5{
+
+    font-weight:600;
+
+}
+
+p{
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+strong{
+
+    color:white;
+
+}
+
+code{
+
+    color:var(--secondary);
+
+}
+
+/* ---------- LINKS ---------- */
+
+a{
+
+    color:var(--secondary);
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    color:var(--primary);
+
+}
+
+/* ---------- TERMINAL FONT ---------- */
+
+pre,
+.prompt,
+input,
+.cmd,
+#terminal-output{
+
+    font-family:"JetBrains Mono",monospace;
+
+}
+
+/* ---------- MATRIX ---------- */
+
+#matrix{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    z-index:-10;
+
+}
+
+/* ---------- APP ---------- */
+
+#app{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+/* ---------- HIDDEN ---------- */
 
 .hidden{
+
     display:none;
-}
-
-.window{
-
-    width:90%;
-
-    max-width:1200px;
-
-    height:85vh;
-
-    margin:40px auto;
-
-    border:1px solid #00ff66;
-
-    box-shadow:0 0 20px #00ff66;
 
 }
 
-.titlebar{
+/* ---------- HR ---------- */
 
-    background:#001a00;
+hr{
 
-    padding:12px;
+    border:none;
 
-    border-bottom:1px solid #00ff66;
+    height:1px;
+
+    background:var(--border);
+
+    margin:18px 0;
+
+}
+
+/* ---------- ONLINE ---------- */
+
+.online{
+
+    color:var(--primary);
 
     font-weight:bold;
 
 }
 
-.terminal{
+/* ---------- TERMINAL COMMAND ---------- */
 
-    padding:20px;
+.cmd{
 
-    height:100%;
-
-    overflow:auto;
+    color:var(--primary);
 
 }
 
-.banner{
+/* ---------- INPUT ---------- */
 
-    color:#00ff66;
-
-    margin-bottom:20px;
-
-}
-
-.prompt{
-
-    display:flex;
-
-    gap:10px;
-
-    margin-top:20px;
-
-}
-
-.prompt input{
-
-    flex:1;
+input{
 
     background:transparent;
 
-    color:#00ff66;
+    color:var(--primary);
 
     border:none;
 
     outline:none;
 
-    font-family:inherit;
+    width:100%;
 
-    font-size:16px;
+    font-size:15px;
+
+    caret-color:var(--primary);
+
+}
+
+/* ---------- LIST ---------- */
+
+ul{
+
+    list-style:none;
+
+}
+
+li{
+
+    padding:8px 0;
+
+    color:var(--text);
+
+}
+
+/* ---------- LOADING BAR ---------- */
+
+.loading-bar{
+
+    width:420px;
+
+    max-width:90vw;
+
+    height:10px;
+
+    background:#111;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin-top:25px;
+
+    border:1px solid var(--border);
+
+}
+
+#loading-progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(
+        90deg,
+        var(--secondary),
+        var(--primary)
+    );
+
+}
+
+/* ---------- SCROLLBAR ---------- */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:20px;
+
+}
+
+/* ---------- SELECTION ---------- */
+
+::selection{
+
+    background:var(--primary);
+
+    color:black;
+
+}
+
+/* ---------- GLOW ---------- */
+
+.glow{
+
+    text-shadow:
+
+    0 0 8px var(--primary),
+
+    0 0 20px var(--primary);
+
+}
+
+/* ---------- FADE ---------- */
+
+.fade{
+
+    animation:fade .8s ease;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
 
 }

@@ -1,0 +1,414 @@
+/* =======================================================
+   CYBER TERMINAL v2
+   animations.css
+   Cinematic Animations
+=======================================================*/
+
+/* ---------- PAGE FADE ---------- */
+
+body{
+
+    animation:pageFade 1.2s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- WINDOW FLOAT ---------- */
+
+.window{
+
+    animation:windowEnter 1s ease;
+
+}
+
+@keyframes windowEnter{
+
+    from{
+
+        transform:translateY(30px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar{
+
+    animation:slideLeft .9s ease;
+
+}
+
+@keyframes slideLeft{
+
+    from{
+
+        transform:translateX(-50px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- TERMINAL ---------- */
+
+.terminal-panel{
+
+    animation:slideRight 1s ease;
+
+}
+
+@keyframes slideRight{
+
+    from{
+
+        transform:translateX(40px);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:translateX(0);
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- BOOT LOG ---------- */
+
+#boot-log{
+
+    animation:bootGlow 2s infinite alternate;
+
+}
+
+@keyframes bootGlow{
+
+    from{
+
+        text-shadow:0 0 5px rgba(0,255,136,.2);
+
+    }
+
+    to{
+
+        text-shadow:
+
+        0 0 12px rgba(0,255,136,.8),
+
+        0 0 28px rgba(0,255,136,.3);
+
+    }
+
+}
+
+/* ---------- ONLINE DOT ---------- */
+
+.online{
+
+    animation:pulse 1.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        opacity:.5;
+
+    }
+
+    50%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:.5;
+
+    }
+
+}
+
+/* ---------- PROFILE CARD ---------- */
+
+.profile-card{
+
+    transition:.35s;
+
+}
+
+.profile-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+        0 0 20px rgba(0,255,136,.15);
+
+}
+
+/* ---------- MENU ---------- */
+
+.menu{
+
+    transition:.35s;
+
+}
+
+.menu:hover{
+
+    box-shadow:
+
+        0 0 18px rgba(0,217,255,.12);
+
+}
+
+/* ---------- CLOCK ---------- */
+
+#clock{
+
+    animation:clockGlow 2s infinite alternate;
+
+}
+
+@keyframes clockGlow{
+
+    from{
+
+        text-shadow:none;
+
+    }
+
+    to{
+
+        text-shadow:
+
+        0 0 10px rgba(0,255,136,.8);
+
+    }
+
+}
+
+/* ---------- TERMINAL INPUT ---------- */
+
+#terminal{
+
+    animation:terminalAppear 1.2s ease;
+
+}
+
+@keyframes terminalAppear{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- COMMAND OUTPUT ---------- */
+
+#terminal-output p{
+
+    animation:outputFade .4s ease;
+
+}
+
+@keyframes outputFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(5px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ---------- PROJECT CARD ---------- */
+
+.project-card{
+
+    transition:.35s;
+
+}
+
+.project-card:hover{
+
+    transform:
+
+        translateY(-6px)
+
+        scale(1.01);
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+.buttons span{
+
+    transition:.25s;
+
+}
+
+.buttons span:hover{
+
+    transform:scale(1.25);
+
+}
+
+/* ---------- TITLE ---------- */
+
+.title{
+
+    animation:titleGlow 3s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+    from{
+
+        color:var(--primary);
+
+    }
+
+    to{
+
+        color:var(--secondary);
+
+        text-shadow:
+
+        0 0 12px rgba(0,217,255,.7);
+
+    }
+
+}
+
+/* ---------- LOADING BAR ---------- */
+
+#loading-progress{
+
+    box-shadow:
+
+    0 0 15px rgba(0,255,136,.5),
+
+    0 0 30px rgba(0,255,136,.2);
+
+}
+
+/* ---------- HOVER ---------- */
+
+.profile-card,
+.menu,
+.clock-box,
+.project-card{
+
+    transition:
+
+    transform .3s ease,
+
+    box-shadow .3s ease,
+
+    border-color .3s ease;
+
+}
+
+/* ---------- WINDOW ---------- */
+
+.window:hover{
+
+    box-shadow:
+
+        0 0 30px rgba(0,255,136,.15),
+
+        0 0 80px rgba(0,217,255,.08);
+
+}
+
+/* ---------- LINKS ---------- */
+
+a{
+
+    transition:.3s;
+
+}
+
+a:hover{
+
+    text-shadow:
+
+    0 0 8px var(--secondary);
+
+}
+
+/* ---------- REDUCED MOTION ---------- */
+
+@media (prefers-reduced-motion: reduce){
+
+*{
+
+    animation:none !important;
+
+    transition:none !important;
+
+}
+
+}

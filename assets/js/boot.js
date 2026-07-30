@@ -1,49 +1,78 @@
-const lines=[
+/* ==========================================================
+   CyberTerminal v2
+   boot.js
+   Cinematic Boot Sequence
+========================================================== */
 
-"Initializing BIOS...",
+const bootLines = [
 
-"Loading Security Modules...",
-
-"Loading AI Engine...",
-
-"Loading Portfolio...",
-
-"Checking Integrity...",
-
-"Access Granted."
+"Powering CyberTerminal...",
+"Checking BIOS............................OK",
+"Checking Memory..........................OK",
+"Loading Security Modules................OK",
+"Loading Threat Intelligence.............OK",
+"Loading AI Engine.......................OK",
+"Connecting GitHub.......................OK",
+"Verifying Portfolio.....................OK",
+"Authentication Successful",
+"",
+"Welcome back, Krish."
 
 ];
 
-const boot=document.getElementById("boot-text");
+const bootLog = document.getElementById("boot-log");
+const progress = document.getElementById("loading-progress");
+const bootScreen = document.getElementById("boot-screen");
+const app = document.getElementById("app");
+const status = document.getElementById("boot-status");
 
-let i=0;
+let currentLine = 0;
 
-function nextLine(){
+function typeBootLine(){
 
-    if(i<lines.length){
+    if(currentLine >= bootLines.length){
 
-        boot.innerHTML+=lines[i]+"<br>";
+        status.textContent = "ACCESS GRANTED";
 
-        i++;
+        setTimeout(() => {
 
-        setTimeout(nextLine,700);
+            bootScreen.classList.add("fade-out");
+
+            setTimeout(() => {
+
+                bootScreen.style.display = "none";
+
+                app.classList.remove("hidden");
+
+                document.getElementById("terminal").focus();
+
+            },1000);
+
+        },800);
+
+        return;
 
     }
 
-    else{
+    const p = document.createElement("p");
 
-        setTimeout(()=>{
+    p.textContent = bootLines[currentLine];
 
-            document.getElementById("boot-screen").style.display="none";
+    bootLog.appendChild(p);
 
-            document.getElementById("terminal-container").classList.remove("hidden");
+    bootLog.scrollTop = bootLog.scrollHeight;
 
-            document.getElementById("command-input").focus();
+    progress.style.width =
+        ((currentLine + 1) / bootLines.length * 100) + "%";
 
-        },1000);
+    currentLine++;
 
-    }
+    setTimeout(typeBootLine,550);
 
 }
 
-nextLine();
+window.addEventListener("load",()=>{
+
+    setTimeout(typeBootLine,600);
+
+});

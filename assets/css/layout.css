@@ -1,0 +1,392 @@
+/* =======================================================
+   CYBER TERMINAL v2
+   layout.css
+   Dashboard Layout
+======================================================= */
+
+/* ---------- WINDOW ---------- */
+
+.window{
+
+    width:95%;
+    max-width:1500px;
+
+    height:92vh;
+
+    background:rgba(13,17,23,.88);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 0 25px rgba(0,255,136,.10),
+        0 0 60px rgba(0,217,255,.05);
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/* ---------- TITLE BAR ---------- */
+
+.title-bar{
+
+    height:56px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 20px;
+
+    background:rgba(0,0,0,.25);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+/* ---------- WINDOW BUTTONS ---------- */
+
+.buttons{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.buttons span{
+
+    width:14px;
+    height:14px;
+
+    border-radius:50%;
+
+}
+
+.red{
+
+    background:#ff5f57;
+
+}
+
+.yellow{
+
+    background:#febc2e;
+
+}
+
+.green{
+
+    background:#28c840;
+
+}
+
+/* ---------- TITLE ---------- */
+
+.title{
+
+    flex:1;
+
+    text-align:center;
+
+    font-family:"JetBrains Mono",monospace;
+
+    letter-spacing:2px;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+}
+
+/* ---------- MAIN GRID ---------- */
+
+.dashboard{
+
+    flex:1;
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    overflow:hidden;
+
+}
+
+/* =======================================================
+   SIDEBAR
+======================================================= */
+
+.sidebar{
+
+    background:rgba(255,255,255,.02);
+
+    border-right:1px solid var(--border);
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/* ---------- PROFILE ---------- */
+
+.profile-card{
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:20px;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.profile-card h2{
+
+    color:var(--primary);
+
+    margin-bottom:8px;
+
+    letter-spacing:2px;
+
+}
+
+.profile-card p{
+
+    font-size:14px;
+
+}
+
+/* ---------- INFO ---------- */
+
+.info{
+
+    margin-top:10px;
+
+}
+
+.info p{
+
+    margin-bottom:5px;
+
+}
+
+/* ---------- FEATURED ---------- */
+
+.menu{
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.menu h3{
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+}
+
+.menu li{
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+.menu li:hover{
+
+    color:var(--primary);
+
+    transform:translateX(6px);
+
+}
+
+/* ---------- CLOCK ---------- */
+
+.clock-box{
+
+    margin-top:auto;
+
+    border:1px solid var(--border);
+
+    border-radius:14px;
+
+    padding:18px;
+
+    background:rgba(255,255,255,.02);
+
+}
+
+.clock-box h3{
+
+    color:var(--secondary);
+
+    margin-bottom:12px;
+
+}
+
+#clock{
+
+    font-family:"JetBrains Mono",monospace;
+
+    color:var(--primary);
+
+    font-size:24px;
+
+    letter-spacing:2px;
+
+}
+
+/* =======================================================
+   TERMINAL PANEL
+======================================================= */
+
+.terminal-panel{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    overflow:hidden;
+
+}
+
+/* ---------- OUTPUT ---------- */
+
+#terminal-output{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    padding-right:8px;
+
+    line-height:1.9;
+
+}
+
+/* ---------- WELCOME ---------- */
+
+.welcome{
+
+    color:var(--secondary);
+
+    font-size:22px;
+
+    margin-bottom:18px;
+
+}
+
+.welcome span{
+
+    color:var(--primary);
+
+    font-weight:bold;
+
+}
+
+/* ---------- INPUT ---------- */
+
+.terminal-input{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    border-top:1px solid var(--border);
+
+    padding-top:18px;
+
+    margin-top:20px;
+
+}
+
+.prompt{
+
+    color:var(--primary);
+
+    white-space:nowrap;
+
+    font-weight:600;
+
+}
+
+/* ---------- INPUT FIELD ---------- */
+
+#terminal{
+
+    flex:1;
+
+}
+
+/* =======================================================
+   RESPONSIVE
+======================================================= */
+
+@media(max-width:1100px){
+
+.dashboard{
+
+    grid-template-columns:260px 1fr;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.dashboard{
+
+    grid-template-columns:1fr;
+
+}
+
+.sidebar{
+
+    display:none;
+
+}
+
+.window{
+
+    width:100%;
+
+    height:100vh;
+
+    border-radius:0;
+
+}
+
+.title{
+
+    font-size:12px;
+
+}
+
+}

@@ -1,33 +1,245 @@
+/* =======================================================
+   CYBER TERMINAL v2
+   boot.css
+   Cinematic Boot Screen
+======================================================= */
+
+/* ---------- FULLSCREEN BOOT ---------- */
+
 #boot-screen{
+
+    position:fixed;
+
+    inset:0;
 
     width:100vw;
 
     height:100vh;
 
-    display:flex;
+    background:#05070d;
 
-    flex-direction:column;
+    display:flex;
 
     justify-content:center;
 
     align-items:center;
 
+    z-index:9999;
+
+    transition:opacity 1s ease;
+
 }
 
-#boot-logo{
+/* ---------- CONTAINER ---------- */
 
-    color:#00ff66;
+.boot-container{
+
+    width:850px;
+
+    max-width:95vw;
+
+    text-align:center;
+
+}
+
+/* ---------- ASCII LOGO ---------- */
+
+.ascii{
+
+    color:var(--primary);
+
+    font-family:"JetBrains Mono",monospace;
+
+    font-size:16px;
+
+    line-height:1.15;
+
+    margin-bottom:25px;
+
+    white-space:pre;
+
+    text-shadow:
+
+        0 0 10px rgba(0,255,136,.45),
+
+        0 0 25px rgba(0,255,136,.20);
+
+}
+
+/* ---------- TITLES ---------- */
+
+.boot-container h1{
+
+    color:white;
+
+    letter-spacing:6px;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.boot-container h2{
+
+    color:var(--secondary);
+
+    font-weight:400;
+
+    letter-spacing:4px;
+
+    margin-bottom:40px;
+
+}
+
+/* ---------- BOOT LOG ---------- */
+
+#boot-log{
+
+    width:650px;
+
+    max-width:90vw;
+
+    margin:0 auto;
+
+    text-align:left;
+
+    min-height:220px;
+
+    font-family:"JetBrains Mono",monospace;
+
+    color:var(--primary);
+
+    line-height:2;
+
+    overflow:hidden;
+
+}
+
+/* ---------- STATUS ---------- */
+
+#boot-status{
+
+    margin-top:18px;
+
+    color:var(--secondary);
+
+    letter-spacing:2px;
+
+    font-family:"JetBrains Mono",monospace;
+
+    animation:blink 1s infinite;
+
+}
+
+/* ---------- LOADING BAR ---------- */
+
+.loading-bar{
+
+    margin:35px auto 0;
+
+}
+
+/* ---------- PROGRESS ---------- */
+
+#loading-progress{
+
+    height:100%;
+
+    width:0%;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        90deg,
+        #00d9ff,
+        #00ff88
+    );
+
+    box-shadow:
+
+        0 0 12px rgba(0,255,136,.45),
+
+        0 0 30px rgba(0,255,136,.20);
+
+    transition:width .4s ease;
+
+}
+
+/* ---------- BLINK ---------- */
+
+@keyframes blink{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.35;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+    }
+
+}
+
+/* ---------- FADE OUT ---------- */
+
+.fade-out{
+
+    opacity:0;
+
+    pointer-events:none;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:768px){
+
+.ascii{
+
+    font-size:10px;
+
+}
+
+.boot-container h1{
+
+    font-size:24px;
+
+    letter-spacing:3px;
+
+}
+
+.boot-container h2{
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+}
+
+#boot-log{
+
+    width:95%;
 
     font-size:13px;
 
+    min-height:170px;
+
 }
 
-#boot-text{
+.loading-bar{
 
-    margin-top:40px;
+    width:90%;
 
-    white-space:pre-line;
-
-    line-height:2;
+}
 
 }
