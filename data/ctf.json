@@ -1,0 +1,22 @@
+[
+  {
+    "platform": "PicoCTF",
+    "category": "Cryptography",
+    "status": "Completed"
+  },
+  {
+    "platform": "PicoCTF",
+    "category": "Forensics",
+    "status": "Completed"
+  },
+  {
+    "platform": "PicoCTF",
+    "category": "Web Exploitation",
+    "status": "Completed"
+  },
+  {
+    "platform": "Custom CTF",
+    "category": "Blockchain",
+    "status": "Completed"
+  }
+]

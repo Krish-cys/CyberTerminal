@@ -1,0 +1,34 @@
+[
+  {
+    "skill": "Python",
+    "level": 95
+  },
+  {
+    "skill": "Linux",
+    "level": 90
+  },
+  {
+    "skill": "Git",
+    "level": 85
+  },
+  {
+    "skill": "Java",
+    "level": 80
+  },
+  {
+    "skill": "Bash",
+    "level": 80
+  },
+  {
+    "skill": "C",
+    "level": 75
+  },
+  {
+    "skill": "Networking",
+    "level": 82
+  },
+  {
+    "skill": "Web Security",
+    "level": 80
+  }
+]

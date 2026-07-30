@@ -1,12 +1,29 @@
 [
   {
-    "name": "RansomShield",
+    "id": 1,
+    "name": "CipherWatch",
+    "description": "Quantum Readiness Scanner for cryptographic analysis.",
+    "language": "Python",
     "status": "Active",
-    "description": "Offline AI-powered endpoint detection and response."
+    "category": "Cyber Security",
+    "github": "https://github.com/Krish-cys/CipherWatch"
   },
   {
-    "name": "CipherWatch",
+    "id": 2,
+    "name": "RansomShield",
+    "description": "Offline AI-powered Endpoint Detection and Response system.",
+    "language": "Python",
+    "status": "Development",
+    "category": "AI Security",
+    "github": "https://github.com/Krish-cys/RansomShield"
+  },
+  {
+    "id": 3,
+    "name": "CyberTerminal",
+    "description": "Interactive cybersecurity portfolio with Linux terminal interface.",
+    "language": "JavaScript",
     "status": "Active",
-    "description": "Quantum cryptography readiness scanner."
+    "category": "Portfolio",
+    "github": "https://github.com/Krish-cys/CyberTerminal"
   }
 ]

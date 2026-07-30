@@ -1,0 +1,27 @@
+[
+  {
+    "year": "2025",
+    "title": "Started Cyber Security",
+    "description": "Began learning Linux, networking and ethical hacking."
+  },
+  {
+    "year": "2026",
+    "title": "CTF Journey",
+    "description": "Solved cryptography, web exploitation and forensic challenges."
+  },
+  {
+    "year": "2026",
+    "title": "CipherWatch",
+    "description": "Started building a quantum cryptography scanner."
+  },
+  {
+    "year": "2026",
+    "title": "RansomShield",
+    "description": "Designed an offline AI-based ransomware detection system."
+  },
+  {
+    "year": "Future",
+    "title": "Security Engineer",
+    "description": "Goal: Build enterprise-grade AI security solutions."
+  }
+]
