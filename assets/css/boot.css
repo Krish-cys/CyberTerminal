@@ -1,0 +1,33 @@
+#boot-screen{
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#boot-logo{
+
+    color:#00ff66;
+
+    font-size:13px;
+
+}
+
+#boot-text{
+
+    margin-top:40px;
+
+    white-space:pre-line;
+
+    line-height:2;
+
+}

@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#050505;
+
+    color:#00ff66;
+
+    font-family:"JetBrains Mono",monospace;
+
+    overflow:hidden;
+
+}
+
+.hidden{
+    display:none;
+}
+
+.window{
+
+    width:90%;
+
+    max-width:1200px;
+
+    height:85vh;
+
+    margin:40px auto;
+
+    border:1px solid #00ff66;
+
+    box-shadow:0 0 20px #00ff66;
+
+}
+
+.titlebar{
+
+    background:#001a00;
+
+    padding:12px;
+
+    border-bottom:1px solid #00ff66;
+
+    font-weight:bold;
+
+}
+
+.terminal{
+
+    padding:20px;
+
+    height:100%;
+
+    overflow:auto;
+
+}
+
+.banner{
+
+    color:#00ff66;
+
+    margin-bottom:20px;
+
+}
+
+.prompt{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+.prompt input{
+
+    flex:1;
+
+    background:transparent;
+
+    color:#00ff66;
+
+    border:none;
+
+    outline:none;
+
+    font-family:inherit;
+
+    font-size:16px;
+
+}

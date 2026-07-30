@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberTerminal</title>
+    <title>P Jai Krishna | CyberTerminal</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/boot.css">
+    <link rel="stylesheet" href="assets/css/terminal.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>CyberTerminal Portfolio</h1>
+
+<div id="boot-screen">
+
+    <pre id="boot-logo">
+ ██████╗██╗   ██╗██████╗ ███████╗██████╗
+██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗
+██║      ╚████╔╝ ██████╔╝█████╗  ██████╔╝
+██║       ╚██╔╝  ██╔══██╗██╔══╝  ██╔══██╗
+╚██████╗   ██║   ██████╔╝███████╗██║  ██║
+ ╚═════╝   ╚═╝   ╚═════╝ ╚══════╝╚═╝  ╚═╝
+    </pre>
+
+    <div id="boot-text"></div>
+
+</div>
+
+<div id="terminal-container" class="hidden">
+
+    <div class="window">
+
+        <div class="titlebar">
+            CyberTerminal • Portfolio
+        </div>
+
+        <div class="terminal">
+
+<pre class="banner">
+██████╗      ██╗ █████╗ ██╗
+██╔══██╗     ██║██╔══██╗██║
+██████╔╝     ██║███████║██║
+██╔═══╝ ██   ██║██╔══██║██║
+██║     ╚█████╔╝██║  ██║██║
+╚═╝      ╚════╝ ╚═╝  ╚═╝╚═╝
+</pre>
+
+<p>Cyber Security Student</p>
+<p>AI Security Research</p>
+<p>CTF Player</p>
+
+<br>
+
+<div id="output"></div>
+
+<div class="prompt">
+<span>guest@portfolio:~$</span>
+<input id="command-input" autofocus>
+</div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="assets/js/boot.js"></script>
+<script src="assets/js/app.js"></script>
+
 </body>
 </html>

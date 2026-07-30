@@ -1,0 +1,12 @@
+[
+  {
+    "name": "RansomShield",
+    "status": "Active",
+    "description": "Offline AI-powered endpoint detection and response."
+  },
+  {
+    "name": "CipherWatch",
+    "status": "Active",
+    "description": "Quantum cryptography readiness scanner."
+  }
+]
