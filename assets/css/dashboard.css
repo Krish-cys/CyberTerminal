@@ -1,0 +1,340 @@
+/*=====================================================
+ CyberTerminal v3
+ Dashboard
+======================================================*/
+
+.dashboard{
+    display:grid;
+    grid-template-columns:300px 1fr;
+    gap:20px;
+    padding:25px;
+    min-height:100vh;
+}
+
+/*================ Sidebar ================*/
+
+.sidebar{
+
+    background:#08110d;
+
+    border:1px solid #00ff88;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    box-shadow:0 0 20px rgba(0,255,120,.15);
+
+}
+
+.profile{
+
+    text-align:center;
+
+}
+
+.avatar{
+
+    width:140px;
+
+    height:140px;
+
+    border-radius:50%;
+
+    border:3px solid #00ff88;
+
+    object-fit:cover;
+
+    box-shadow:0 0 25px #00ff88;
+
+}
+
+.name{
+
+    margin-top:15px;
+
+    font-size:28px;
+
+    color:#00ff88;
+
+    font-weight:bold;
+
+}
+
+.role{
+
+    color:#bbb;
+
+    margin-top:5px;
+
+}
+
+/*================ Menu ================*/
+
+.menu{
+
+    margin-top:35px;
+
+}
+
+.menu ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.menu li{
+
+    padding:12px;
+
+    margin:10px 0;
+
+    border-left:4px solid transparent;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.menu li:hover{
+
+    border-left:4px solid #00ff88;
+
+    background:#10281d;
+
+}
+
+/*================ Main Area ================*/
+
+.main{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+/*================ Top Widgets ================*/
+
+.widgets{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+
+}
+
+.widget{
+
+    background:#08110d;
+
+    border:1px solid #00ff88;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+.widget:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 0 20px rgba(0,255,100,.4);
+
+}
+
+.widget h3{
+
+    color:#888;
+
+    margin-bottom:10px;
+
+}
+
+.widget span{
+
+    color:#00ff88;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+/*================ Terminal Card ================*/
+
+.terminal-card{
+
+    background:#050505;
+
+    border:1px solid #00ff88;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:0 0 20px rgba(0,255,100,.15);
+
+}
+
+.terminal-header{
+
+    background:#091b12;
+
+    padding:12px;
+
+    border-bottom:1px solid #00ff88;
+
+    color:#00ff88;
+
+}
+
+.terminal-body{
+
+    padding:20px;
+
+}
+
+/*================ Project Cards ================*/
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+
+}
+
+.project{
+
+    background:#08110d;
+
+    border:1px solid #00ff88;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    transition:.3s;
+
+}
+
+.project:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 0 25px rgba(0,255,120,.25);
+
+}
+
+.project h3{
+
+    color:#00ff88;
+
+}
+
+.project p{
+
+    color:#ccc;
+
+}
+
+/*================ Status =================*/
+
+.online{
+
+    color:#00ff88;
+
+}
+
+.warning{
+
+    color:#ffd500;
+
+}
+
+.offline{
+
+    color:#ff5555;
+
+}
+
+/*================ Progress =================*/
+
+.progress{
+
+    margin-top:15px;
+
+    background:#111;
+
+    height:10px;
+
+    border-radius:10px;
+
+    overflow:hidden;
+
+}
+
+.progress div{
+
+    height:100%;
+
+    background:#00ff88;
+
+}
+
+/*================ Responsive =================*/
+
+@media(max-width:1100px){
+
+.widgets{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.widgets{
+
+grid-template-columns:1fr;
+
+}
+
+.avatar{
+
+width:110px;
+
+height:110px;
+
+}
+
+.name{
+
+font-size:22px;
+
+}
+
+}

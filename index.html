@@ -3,221 +3,457 @@
 
 <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>Krish | CyberTerminal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Krish OS | Cyber Security Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/layout.css">
-    <link rel="stylesheet" href="assets/css/boot.css">
-    <link rel="stylesheet" href="assets/css/terminal.css">
-    <link rel="stylesheet" href="assets/css/animations.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/dashboard.css">
+<link rel="stylesheet" href="assets/css/terminal.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<link rel="stylesheet" href="assets/css/boot.css">
 
 </head>
 
 <body>
 
 <!-- Matrix Background -->
+
 <canvas id="matrix"></canvas>
 
-<!-- ================================================= -->
-<!-- BOOT SCREEN -->
-<!-- ================================================= -->
+<!-- Boot Screen -->
 
-<section id="boot-screen">
+<div id="boot-screen"></div>
 
-    <div class="boot-container">
+<!-- =========================
+     Dashboard
+========================= -->
 
-<pre class="ascii">
+<div class="dashboard">
 
-██╗  ██╗██████╗ ██╗███████╗██╗  ██╗
-██║ ██╔╝██╔══██╗██║██╔════╝██║  ██║
-█████╔╝ ██████╔╝██║███████╗███████║
-██╔═██╗ ██╔══██╗██║╚════██║██╔══██║
-██║  ██╗██║  ██║██║███████║██║  ██║
-╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝
+    <!-- Sidebar -->
 
-</pre>
+    <aside class="sidebar">
 
-<h1>CYBER TERMINAL</h1>
+        <div class="profile">
 
-<h2>Version 2.0</h2>
+            <img
+            src="assets/images/profile.png"
+            class="avatar"
+            alt="Krish">
 
-<div id="boot-log"></div>
+            <h1 class="name">KRISH</h1>
 
-<div class="loading-bar">
+            <p class="role">
 
-<div id="loading-progress"></div>
+                Cyber Security Student
+
+            </p>
+
+            <p>
+
+                AI Security • Malware Analysis
+
+            </p>
+
+        </div>
+
+        <nav class="menu">
+
+            <ul>
+
+                <li>🏠 Dashboard</li>
+
+                <li>💻 Terminal</li>
+
+                <li>🛡 Projects</li>
+
+                <li>📖 Research</li>
+
+                <li>🏆 CTF</li>
+
+                <li>📄 Resume</li>
+
+                <li>📬 Contact</li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- Main -->
+
+    <main class="main">
+
+        <!-- Widgets -->
+
+        <section class="widgets">
+
+            <div class="widget">
+
+                <h3>Threat Level</h3>
+
+                <span class="online">
+
+                    LOW
+
+                </span>
+
+            </div>
+
+            <div class="widget">
+
+                <h3>CPU</h3>
+
+                <span id="cpu">
+
+                    18%
+
+                </span>
+
+            </div>
+
+            <div class="widget">
+
+                <h3>Memory</h3>
+
+                <span id="memory">
+
+                    31%
+
+                </span>
+
+            </div>
+
+            <div class="widget">
+
+                <h3>GitHub</h3>
+
+                <span class="online">
+
+                    Connected
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <!-- Terminal -->
+
+        <section class="terminal-card">
+
+            <div class="terminal-header">
+
+                KRISH OS • Secure Terminal
+
+            </div>
+
+            <div class="terminal-body">
+
+                <div id="terminal-output">
+
+                    <pre>
+
+██████╗ ██╗  ██╗██████╗ ██╗███████╗██╗  ██╗
+██╔══██╗██║ ██╔╝██╔══██╗██║██╔════╝██║  ██║
+██████╔╝█████╔╝ ██████╔╝██║███████╗███████║
+██╔══██╗██╔═██╗ ██╔══██╗██║╚════██║██╔══██║
+██║  ██║██║  ██╗██║  ██║██║███████║██║  ██║
+╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚══════╝╚═╝  ╚═╝
+
+Welcome to KRISH OS
+Type "help" to begin.
+
+                    </pre>
+
+                </div>
+
+                <div class="terminal-input">
+
+                    <span>krish@cyber:~$</span>
+
+                    <input
+                    id="terminal"
+                    type="text"
+                    autocomplete="off"
+                    spellcheck="false">
+
+                </div>
+
+            </div>
+
+        </section>
+                <!-- ==========================
+             PROJECTS
+        =========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                🛡 Featured Projects
+            </h2>
+
+            <div class="project-grid" id="project-grid">
+
+                <!-- Loaded by dashboard.js -->
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             SKILLS
+        =========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+                💻 Skills
+            </h2>
+
+            <div id="skills-container">
+
+                <!-- Loaded dynamically -->
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             TIMELINE
+        =========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+
+                📈 Learning Timeline
+
+            </h2>
+
+            <div id="timeline">
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             CERTIFICATIONS
+        =========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+
+                🎓 Certifications
+
+            </h2>
+
+            <div id="certifications">
+
+            </div>
+
+        </section>
+
+        <!-- ==========================
+             CTF
+        =========================== -->
+
+        <section>
+
+            <h2 class="section-title">
+
+                🏆 CTF Experience
+
+            </h2>
+
+            <div id="ctf-list">
+
+            </div>
+
+        </section>
+
+    </main>
 
 </div>
 
-<p id="boot-status">Initializing...</p>
+<!-- ==========================
+     STATUS BAR
+========================== -->
+
+<footer class="status-bar">
+
+    <div>
+
+        KRISH OS v3
+
+    </div>
+
+    <div>
+
+        Status :
+
+        <span class="online">
+
+            ONLINE
+
+        </span>
+
+    </div>
+
+    <div>
+
+        GitHub :
+
+        <span id="github-status">
+
+            Connected
+
+        </span>
+
+    </div>
+
+    <div>
+
+        Time :
+
+        <span id="clock">
+
+            --:--:--
+
+        </span>
+
+    </div>
+    <section class="widgets">
+
+    <div class="widget">
+
+        <h3>Threat Level</h3>
+
+        <span class="online">
+
+            LOW
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>CPU</h3>
+
+        <span id="cpu">
+
+            0%
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>Memory</h3>
+
+        <span id="memory">
+
+            0%
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>Disk</h3>
+
+        <span id="disk">
+
+            0%
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>Network</h3>
+
+        <span class="online">
+
+            SECURE
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>GitHub</h3>
+
+        <span id="github-status">
+
+            CONNECTING
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>AI Core</h3>
+
+        <span class="online">
+
+            ONLINE
+
+        </span>
+
+    </div>
+
+    <div class="widget">
+
+        <h3>Uptime</h3>
+
+        <span id="uptime">
+
+            00:00:00
+
+        </span>
 
     </div>
 
 </section>
 
-<!-- ================================================= -->
-<!-- MAIN APPLICATION -->
-<!-- ================================================= -->
-
-<section id="app" class="hidden">
-
-<div class="window">
-
-<div class="title-bar">
-
-<div class="buttons">
-
-<span class="red"></span>
-<span class="yellow"></span>
-<span class="green"></span>
-
-</div>
-
-<div class="title">
-
-KRISH TERMINAL • SYSTEM ONLINE
-
-</div>
-
-</div>
-
-<div class="dashboard">
-
-<!-- ================================= -->
-
-<aside class="sidebar">
-
-<div class="profile-card">
-
-<h2>KRISH</h2>
-
-<p>Cyber Security Student</p>
-
-<hr>
-
-<div class="info">
-
-<p><strong>Status</strong></p>
-
-<p class="online">● ONLINE</p>
-
-<br>
-
-<p><strong>Focus</strong></p>
-
-<p>AI Security</p>
-
-<br>
-
-<p><strong>Projects</strong></p>
-
-<p>3 Active</p>
-
-</div>
-
-</div>
-
-<div class="menu">
-
-<h3>Featured</h3>
-
-<ul>
-
-<li>🛡 CipherWatch</li>
-
-<li>⚡ RansomShield</li>
-
-<li>🤖 JARVIS</li>
-
-<li>🏁 CTF</li>
-
-<li>📚 Research</li>
-
-</ul>
-
-</div>
-
-<div class="clock-box">
-
-<h3>LOCAL TIME</h3>
-
-<div id="clock">
-
-00:00:00
-
-</div>
-
-</div>
-
-</aside>
-
-<!-- ================================= -->
-
-<main class="terminal-panel">
-
-<div id="terminal-output">
-
-<p class="welcome">
-
-Welcome back, <span>Krish</span>.
-
-</p>
-
-<p>
-
-Type <span class="cmd">help</span> to begin.
-
-</p>
-
-</div>
-
-<div class="terminal-input">
-
-<span class="prompt">
-
-krish@cyberterminal:~$
-
-</span>
-
-<input
-
-type="text"
-
-id="terminal"
-
-autocomplete="off"
-
-spellcheck="false"
-
-autofocus>
-
-</div>
-
-</main>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================================= -->
-<!-- JAVASCRIPT -->
-<!-- ================================= -->
+</footer>
+
+<!-- ==========================
+     JAVASCRIPT
+========================== -->
 
 <script src="assets/js/boot.js"></script>
 <script src="assets/js/commands.js"></script>
 <script src="assets/js/terminal.js"></script>
+<script src="assets/js/dashboard.js"></script>
+
+<script src="assets/js/github.js"></script>
+<script src="assets/js/matrix.js"></script>
+<script src="assets/js/clock.js"></script>
+<script src="assets/js/ui.js"></script>
+<script src="assets/js/ai.js"></script>
+<script src="assets/js/filesystem.js"></script>
+<script src="assets/js/widgets.js"></script>
+<script src="assets/js/notification.js"></script>
 <script src="assets/js/app.js"></script>
 
 </body>
